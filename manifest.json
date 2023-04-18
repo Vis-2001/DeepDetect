@@ -1,0 +1,19 @@
+{
+  "name":"DeepDetect",
+  "manifest_version":3,
+  "version":"0.1",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "./static/js/background.js"
+  },
+  "content_scripts":[
+    {"matches": ["*://*/*"],
+     "js": ["./static/js/contentScript.js"]}
+],
+"permissions": [
+  "storage","contextMenus","webRequest"
+]
+ 
+}
